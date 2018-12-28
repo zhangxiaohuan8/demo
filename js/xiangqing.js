@@ -102,9 +102,9 @@ img1.onmouseout = function () {
 
 img1.onmousemove = function (ev) {
 	var ev = ev || window.event;
-
+	var TOP=document.body.scrollTop||document.documentElement.scrollTop;
 	var oL = ev.clientX - fangda.offsetLeft - fangdakuang.offsetWidth/2;
-	var oT = ev.clientY - fangda.offsetTop - fangdakuang.offsetHeight/2;
+	var oT = ev.clientY +TOP- fangda.offsetTop - fangdakuang.offsetHeight/2;
 
 	var oMaxw = img1.offsetWidth - fangdakuang.offsetWidth;
 	var oMaxh = img1.offsetHeight - fangdakuang.offsetHeight;
